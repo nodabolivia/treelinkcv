@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f6f8;
 }
 
 code {
@@ -17,22 +18,11 @@ code {
   margin: 0 auto;
 }
 
-@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local("Material Icons"), local("MaterialIcons-Regular"),
-    url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
-    url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
-    url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
-}
-
 .material-icons {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px; /* Preferred icon size */
+  font-size: 16px; /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -59,10 +49,10 @@ code {
   border: none;
   background-color: rgb(13, 110, 184);
   color: white;
-  padding: 15px 25px;
+  padding: 10px 25px;
   border-radius: 3px;
   margin: 10px 0;
-  width: 200px;
+  min-width: 200px;
 }
 
 input[type="text"] {

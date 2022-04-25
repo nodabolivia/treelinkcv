@@ -6,6 +6,7 @@ import { deleteLink, getLinks, insertNewLink, updateLink } from "../firebase/fir
 import DashboardWrapper from "../components/dashboardwrapper";
 import Link from "../components/link";
 import style from "../styles/dashboardView.module.css";
+import style2 from "../styles/link.module.css";
 
 
 
@@ -93,12 +94,12 @@ export default function DashboardView() {
           <label htmlFor="tittle"> Título</label>
           <input className="input" type="text" name="title" onChange={handleOnChange} />
           <label htmlFor="url"> URL</label>
-          <input className="input" type="textarea" name="url" onChange={handleOnChange} />
+          <input className="input" type="text" name="url" onChange={handleOnChange} />
 
           <input className="btn" type="submit" value="Crear link" />
         </form>
 
-        <div>
+        <div className={style2.linksContainer}>
           {links.map((link) => (
             <Link
               key={link.docId}

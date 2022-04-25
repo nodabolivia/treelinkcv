@@ -2,6 +2,7 @@ import DashboardWrapper from "../components/dashboardwrapper";
 import { AuthProviders } from "../components/authProvider";
 import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
+import style from "../styles/editProfileView.module.css"
 import {
   getLinks,
   getProfilePhotoUrl,
@@ -70,18 +71,20 @@ export default function EditProfileView() {
     <DashboardWrapper>
       <div>
         <h2>Edit Profile Info</h2>
-        <div>
+        <div className={style.profilePictureContainer}>
           <div>
             <img src={profileUrl} alt="" width={100} />
           </div>
           <div>
-            <button onClick={handleOpenFilePicker}>
+            <button 
+            className="btn"
+            onClick={handleOpenFilePicker}>
               Choose new profile picture
             </button>
             <input
+              className={style.fileInput}
               ref={fileRef}
               type="file"
-              style={{ display: "none" }}
               onChange={handleChangeFile}
             />
           </div>
