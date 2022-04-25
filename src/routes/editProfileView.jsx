@@ -15,6 +15,9 @@ export default function EditProfileView() {
   const [currentUser, setCurrentUser] = useState({});
   const [state, setState] = useState(0);
   const [profileUrl, setProfileUrl] = useState(null);
+  const [username, setUsername] = useState("")
+
+
   const fileRef = useRef(null);
 
   async function handleUserLoggeIn(user) {
@@ -88,6 +91,11 @@ export default function EditProfileView() {
               onChange={handleChangeFile}
             />
           </div>
+        </div>
+        <div>
+          <form>
+            
+          </form>
         </div>
       </div>
     </DashboardWrapper>

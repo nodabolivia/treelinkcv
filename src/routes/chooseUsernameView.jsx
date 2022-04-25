@@ -22,10 +22,7 @@ export default function ChooseUserNameView() {
   function handleInputUsername(e) {
     setUsername(e.target.value);
   }
-  async function handleDeleteLink(docId) {  
-    //   await 
-  }
-
+ 
   async function handleContinue() {
     if (username !== "") {
       const exists = await existUsername(username);
